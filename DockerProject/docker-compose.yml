@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  api:
+    container_name: api_student
+    image: djoumi/api-student:v1          
+   # ports:
+    #  - "5000"
+    volumes:
+      - ./simple_api/student_age.json:/data/student_age.json
+    networks:
+      - student-list-network
+
+  webpage:
+    container_name: webpage
+    image: php:apache
+    environment:
+      - USERNAME=toto
+      - PASSWORD=python
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    volumes:
+      - ./website:/var/www/html
+    networks:
+      - student-list-network
+
+networks:
+  student-list-network:
+    driver: bridge
