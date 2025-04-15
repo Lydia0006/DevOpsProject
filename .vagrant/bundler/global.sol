@@ -1,0 +1,1 @@
+{"dependencies":[["vagrant-docker-compose",["= 1.5.1"]],["vagrant-docker-login",["= 1.0.0"]],["vagrant-vmware-desktop",["= 3.0.4"]]],"checksum":"3cc281d2457b4d78418ef39d7047d90c7170c287b4b38b8768f8d45ef00879f2","vagrant_version":"2.4.1"}
